@@ -1,0 +1,115 @@
+.card{ 
+  margin: 0 auto; 
+  float: none; 
+  border: lightgreen;
+  font-family: Montserrat;
+  padding-top: 15px;
+  box-shadow: 3px 3px 5px 2px #ccc;
+}
+
+.logo-cadastro{
+    margin-left: 800px; 
+}
+
+.body-cadastro{
+    margin-top: 250px;
+}
+
+body{
+    background-image: url("../images/bkg13.jpg");
+    background-repeat: no-repeat;
+    background-size: 101%;
+    background-color: BLACK;
+    
+}
+
+.txt2 {
+    font-size: 13px;
+    color: #333333;
+}
+
+.card-img-top{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  .card-group{
+      margin-top: 50px;
+  }
+
+.btn-primary{color:#fff;background-color:#00cc33;border-color:#84ff80}
+
+.btn-primary:hover{color:#fff;background-color:#00cc33;border-color:#84ff80}
+.btn-primary:focus,.btn-primary.focus{box-shadow:0 0 0 .2rem #84ff80}
+.btn-primary.disabled,.btn-primary:disabled{color:#fff;background-color:#00cc33;border-color:#84ff80}
+.btn-primary:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,.show>.btn-primary.dropdown-toggle{color:#fff;background-color:#84ff80;border-color:#84ff80}
+.btn-primary:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,.show>.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #84ff80}
+
+.btn-outline-primary{color:#00cc33;background-color:transparent;background-image:none;border-color:#00cc33}.btn-outline-primary:hover{color:#84ff80;background-color:#84ff80;border-color:#00cc33}
+.btn-outline-primary:focus,.btn-outline-primary.focus{box-shadow:0 0 0 .2rem #00cc33}
+.btn-outline-primary.disabled,.btn-outline-primary:disabled{color:#00cc33;background-color:#00cc33}
+.btn-outline-primary:not(:disabled):not(.disabled):active,.btn-outline-primary:not(:disabled):not(.disabled).active,.show>.btn-outline-primary.dropdown-toggle{color:#fff;background-color:#84ff80;border-color:#00cc33}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.btn-outline-primary:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #84ff80}
+
+.btn.btn-primary {
+  background-color: #00cc33
+}
+
+.btn.btn-primary:active,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+  background-color: #00cc33 !important;
+  border-color:#84ff80
+}
+
+.nav-link > .active{
+  background-color: blueviolet;
+}
+
+a{
+    color:  #069b2b;
+}
+
+a:hover {
+    color: #2a9c43;
+  }
+
+a:active {
+    color: #069b2b;
+  }
+
+.tab-content {
+    border: 1px solid #dee2e6;
+    border-top: transparent;
+    padding: 15px;
+}
+  
+.tab-content .tab-pane {
+    background-color: #FFF;
+    min-height: 200px;
+    height: auto;
+}
+
+
+.btnContinuar{
+    text-align: right;
+}
+
+span{
+    background-color: green !important  
+
+}
+
+
+.bronze{
+  background-color:#cd7f32;
+}
+
+.silver{
+  background-color: #c0c0c0;
+}
+
+.gold{
+  background-color: gold;
+}

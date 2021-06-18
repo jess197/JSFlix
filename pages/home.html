@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style-home.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="../js/carrousel-filmes.js"></script>
+    <script type="text/javascript" src="../js/home.js"></script>
+	<title>JSFlix</title>
+</head>
+<body>
+	<header>
+		<div class="contenedor">
+            
+             <img src="../images/jsflixlogo.png" alt="">
+            <nav>
+                <a class="nomeUsuario" id="nomeUsuario"></a>
+				<a href="home.html" class="activo">Início</a>
+				<a href="filtroFilmes.html" >Filtrar Filmes</a>
+				<a href="#" aria-disabled="true">Minha lista</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="atualizacaoCartao.html">Atualizar dados do cartão</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a href="loginAdm.html" class="dropdown-item">Admin</a></li>
+                    <li><a class="dropdown-item" id="btnlogout">Sair</a></li>
+                    </ul>
+                </div>
+			</nav> 
+		</div>
+	</header>
+
+	<main>
+		<div class="pelicula-principal">
+			<div class="contenedor">
+				<h3 class="titulo">Amor e Monstros</h3>
+				<p class="descripcion">
+					Sete anos depois de sobreviver ao apocalipse dos monstros, o fofo e azarado Joel abandona seu bunker aconchegante para encontrar a ex
+				</p>
+				<button role="button" class="boton"><i class="fas fa-play"></i>Reproduzir</button>
+				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Mais informações</button>
+			</div>
+		</div>
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Filmes e Séries Recomendados</h3>
+				<div class="indicadores"></div>
+			</div>
+
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-carousel">
+					<div id="carousel" class="carousel">
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Filmes e Séries Favoritos</h3>
+				<div class="indicadores"></div>
+			</div>
+
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-carousel">
+					<div id="carousel-fav" class="carousel">
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+	</main>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTituloFilme"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div id="modalTrailerFilme"></div>
+            <div id="modalGeneroFilme"></div>
+            <div id="modalAnoFilme"></div>
+			<div id="like"></div>
+            <hr>
+            <div id="modalSinopseFilme"></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+	
+</body>
+</html>

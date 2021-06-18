@@ -1,0 +1,35 @@
+h2{
+    text-align:center; 
+    font-family: Montserrat;
+}
+
+.card{
+    margin-top:300px;
+    padding-top: 15px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    margin-left: 200px;
+    
+}
+
+#img{
+    margin-left:450px;
+    box-shadow: 3px 3px 5px 2px;
+    width: 400px;
+    height: 400px;
+}
+
+body{
+    background-image: url("../images/bkg9.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.txt2 {
+    font-size: 13px;
+    color: #333333;
+}
+
+b{
+    color: red;
+}
+

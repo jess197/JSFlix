@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="../css/style-cadastro.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="../fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/cadastro.js"></script>
+    <title>JSFlix</title>
+  </head>
+  <body>
+      <div class="body-cadastro">
+            <div class="logo-cadastro"><a href="https://fontmeme.com/netflix-font/"><img src="https://fontmeme.com/permalink/210322/839c1d68df50676d54fb8e7e404ef075.png" alt="netflix-font" border="0"></a>
+      </div>
+       <div class="card col-md-6" >
+            <div class="card-body">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Criar Conta</a>
+                            <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Planos</a>
+                            <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Pagamento</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div id="divalertCadastro"></div>
+                                <br>
+                                <form class="row g-3 needs-validation" name="formCadastro" id="formCadastro" novalidate>
+                                    <div class="mb-3">
+                                        <label for="fullname" class="form-label">Nome Completo</label>
+                                        <input type="text" class="form-control" id="fullname" aria-describedby="fullname" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="datanasc" class="form-label">Data Nascimento</label>
+                                        <input type="date"  class="form-control" id="datanasc" placeholder="dd/mm/aaaa" required onkeyup="
+                                        var v = this.value;
+                                        if (v.match(/^\d{2}$/) !== null) {
+                                            this.value = v + '/';
+                                        }else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                                            this.value = v + '/';
+                                        }"  maxlength="10"> 
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email"  class="form-control" id="email" placeholder="email@email.com" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="inpassword" class="form-label">Senha</label>
+                                        <input type="password" class="form-control" id="inpassword" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="confpassword" class="form-label">Confirmação de Senha</label>
+                                        <input type="password" class="form-control" id="confpassword" required>
+                                    </div>
+                                    <div class="col-12 btnContinuar">
+                                        <button type="submit" id="btnCadastrar"  class="btn-cadastro btn btn-success">Continuar</button>
+                                    </div>
+                                </form> 
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div id="divalertPlano"></div>
+                                <div class="container">
+                                    <div class="card-group">
+                                        <div class="card text-center" id="bronzeCard">
+                                          <img class="card-img-top" src="https://img.icons8.com/color/48/000000/bronze-bars.png"/>
+                                          <div class="card-body">
+                                            <h5 class="card-title text-center">Plano Bronze</h5>
+                                            <p class="card-text">Assista 1 filme/série por dia</p>
+                                          </div>
+                                        </div>
+                                        <div class="card text-center" id="silverCard">
+                                          <img class="card-img-top" src="https://img.icons8.com/fluent/48/000000/silver-bars.png"/>
+                                          <div class="card-body">
+                                            <h5 class="card-title text-center">Plano Prata</h5>
+                                            <p class="card-text">Assista 3 filmes/séries por dia</p>
+                                          </div>
+                                        </div>
+                                        <div class="card text-center" id="goldCard">
+                                          <img class="card-img-top" src="https://img.icons8.com/fluent/48/000000/gold-bars.png"/>
+                                          <div class="card-body">
+                                            <h5 class="card-title text-center">Plano Ouro</h5>
+                                            <p class="card-text">Assista filmes/séries ilimitadas</p>
+                                          </div>
+                                        </div>
+                                      </div> 
+                                </div>
+                                <br>
+                                <div class="col-12 btnContinuar">
+                                    <button type="button" id="btnSelecionadoPlano"  class="btn-cadastro btn btn-success">Continuar</button>
+                                </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div id="divalertPagamento"></div>
+                            <br>
+                                <form class="row g-3 needs-validation" name="formPagamento" id="formPagamento" novalidate>
+                                    <div class="mb-3">
+                                        <label for="numcartao" class="form-label">Núm. Cartão</label>
+                                        <input type="text" class="form-control" id="numcartao" aria-describedby="numcartao" required maxlength="19">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="validcartao" class="form-label">Validade</label>
+                                        <input type="date"  class="form-control" id="validcartao" placeholder="dd/mm/aaaa" required onkeyup="
+                                        var v = this.value;
+                                        if (v.match(/^\d{2}$/) !== null) {
+                                            this.value = v + '/';
+                                        }else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                                            this.value = v + '/';
+                                        }"  maxlength="10">
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="codseg" class="form-label">Cód Seg.</label>
+                                        <input type="text"  class="form-control" id="codseg" placeholder="123" required maxlength="4">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="nametit" class="form-label">Nome Titular</label>
+                                        <input type="text" class="form-control" id="nametit" aria-describedby="nametit" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="cpf" class="form-label">CPF</label>
+                                        <input type="text" class="form-control" id="cpf" required maxlength="14">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" id="btnLimpar">Limpar</button>
+                                        <button type="submit" class="btn btn-primary">Iniciar assinatura</button>
+                                    </div>
+                             </form> 
+                        </div>
+                    </div>
+              </div>
+              <div class="text-center"> 
+                <a class="txt2" href="./login.html">Já tenho conta. Ir para o Login</a>
+              </div>
+              <br>
+        </div>
+</body>
+</html>
